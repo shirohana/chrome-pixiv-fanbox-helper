@@ -1,5 +1,8 @@
 # Pixiv Fanbox Helper
 
+\[English\]
+[\[中文\]](README-zh_TW.md)
+
 <!-- 這份文件中的中文註解，是方便我用 Copilot 翻譯英文才留下的 (ﾉ∀`) -->
 
 <!-- Chinese
