@@ -31,6 +31,9 @@ Chrome extension for Pixiv Fanbox.
 - 點擊圖片能捲動到該圖片的位置。
 - 目前下載的檔案名稱，是按照 [PixivUtil2][] 的預設規則來命名。
     (`{postId}_p{index}_{basename} - {title}{ext}`)
+- 支援以下網址格式：
+    - `https://www.fanbox.cc/@{{creatorId}}/posts/{{postId}}`
+    - `https://{{creatorId}}.fanbox.cc/posts/{{postId}}`
 
 ### ***重要***
 
@@ -50,6 +53,9 @@ needs, and there should be no more functions in the near future.
 - The file name currently downloaded is named according to the default rules of
     [PixivUtil2][].
     (`{postId}_p{index}_{basename} - {title}{ext}`)
+- Support the following URL formats:
+    - `https://www.fanbox.cc/@{creatorId}/posts/{postId}`
+    - `https://{creatorId}.fanbox.cc/posts/{postId}`
 
 ### ***Important***
 
