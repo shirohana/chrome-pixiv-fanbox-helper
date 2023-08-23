@@ -1,7 +1,8 @@
 function getDocumentImages() {
-  // Match format: https://www.fanbox.cc/@{string}/posts/{number}
+  // Match format 1: https://www.fanbox.cc/@{string}/posts/{number}
+  // Match format 2: https://${string}.fanbox.cc/posts/${number}
   const FANBOX_URL_REGEX = new RegExp(
-    '^https://www\\.fanbox\\.cc/@[^/]+/posts/(?<postId>\\d+)',
+    '^https://[^.]+\\.fanbox\\.cc/(?:@[^/]+/)?posts/(?<postId>\\d+)',
   )
 
   const formatFilename = (template, fields) => {
@@ -246,9 +247,10 @@ function mount() {
       const nonImages = assets.filter(v => !isImage(v.url))
       const downloadables = assets.filter(v => hasExtension(v.url))
 
-      // Match format: https://www.fanbox.cc/@${string}/posts/${number}
+      // Match format 1: https://www.fanbox.cc/@${string}/posts/${number}
+      // Match format 2: https://${string}.fanbox.cc/posts/${number}
       const FANBOX_URL_REGEX = new RegExp(
-        '^https://www\\.fanbox\\.cc/@[^/]+/posts/(?<postId>\\d+)',
+        '^https://[^.]+\\.fanbox\\.cc/(?:@[^/]+/)?posts/(?<postId>\\d+)',
       )
 
       const isAvailable = FANBOX_URL_REGEX.test(tab.url)
